@@ -9,6 +9,7 @@ def parseArguments():
     parser = argparse.ArgumentParser()
     parser.add_argument("template", help="the template file to use")
     parser.add_argument("--gitdir", help="the git repository path to build release notes against")
+    parser.add_argument("--output", help="outputs results to a filename")
     args = parser.parse_args()    
     return args
 
@@ -64,5 +65,10 @@ if __name__ == "__main__":
     content = GetTemplate(args.template)
 
     t = Templite(content)
-    print( t(commitlist=commits))
+    result = t(commitlist=commits)
+    print(result)
+
+    if args.output:
+        with open(args.output, "wb") as f:
+            f.write(result.encode("utf-8"))
     
