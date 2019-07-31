@@ -1,0 +1,13 @@
+${
+sep = ","
+emit("hash", sep, "date" , sep, "message", sep ,"author","\n")
+for commit in commitlist: 
+    emit(commit[0])
+    emit(sep)
+    emit(commit[1])
+    emit(sep)    
+    emit("\"", commit[2], "\"")
+    emit(sep)
+    emit(commit[3])
+    emit("\n")
+}$  
