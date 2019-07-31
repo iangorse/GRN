@@ -41,6 +41,9 @@ optional arguments:
 
 #### Examples
 
+##### Warning
+The Templite engine runs untrusted python code. Please examine template files before using them
+
 Build a markdown representation of the git log
 
 ```
@@ -52,8 +55,6 @@ Build a HTML represenation of a git log of a different repository
 python grn.py html --gitdir "c:\another repo\.git"
 ```
 
-#### Warning
-The Templite engine runs untrusted python code. Please examine template files before using them
 
 ## Built With
 
