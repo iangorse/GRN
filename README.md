@@ -29,7 +29,7 @@ cd GRN
 ```
 python grn.py --help
 
-usage: grn.py [-h] [--gitdir GITDIR] template
+usage: grn.py [-h] [--gitdir GITDIR] [--output OUTPUT] template
 
 positional arguments:
   template         the template file to use
@@ -37,6 +37,7 @@ positional arguments:
 optional arguments:
   -h, --help       show this help message and exit
   --gitdir GITDIR  the git repository path to build release notes against
+  --output OUTPUT  outputs results to a filename
 ```
 
 #### Examples
