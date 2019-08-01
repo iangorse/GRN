@@ -55,6 +55,12 @@ Build a HTML represenation of a git log of a different repository
 ```
 python grn.py html --gitdir "c:\another repo\.git"
 ```
+Output results to file from a different repository
+```
+python grn.py csv --gitdir "C:\Users\iang\Documents\github\core\.git" --output core.csv
+python grn.py html --gitdir "C:\Users\iang\Documents\github\core\.git" --output core.html
+python grn.py markdown --gitdir "C:\Users\iang\Documents\github\core\.git" --output core.md
+```
 
 
 ## Built With
