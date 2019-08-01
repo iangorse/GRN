@@ -2,17 +2,11 @@ ${
 # GROUPS ALL THE COMMITS BY DATE
 commits = {}
 for commit in commitlist:
-    commit_new = {}
-    commit_new["hash"] = commit[0]
-    commit_new["date"] = commit[1]
-    commit_new["message"] = commit[2]
-    commit_new["author"] = commit[3]    
-    
-    commit_date = commit_new["date"]
+    commit_date = commit["date"]
     if commit_date in commits.keys():
-        commits[commit_date].append(commit_new)
+        commits[commit_date].append(commit)
     else:
-        commits[commit_date] = [commit_new] 
+        commits[commit_date] = [commit] 
 }$
 
 <html>
