@@ -32,13 +32,15 @@ def ParseLogs(logs):
         commit_hash = commit_data[0]
         commit_author = commit_data[1]
         commit_date = date_data[1] + " " + date_data[2] + " " + date_data[4]
+        commit_time = date_data[3]
         commit_message = result[result.find(' : ')+3:]   
-         
+
         commit = {}
         commit["hash"] = commit_hash
         commit["date"] = commit_date
         commit["message"] = commit_message
         commit["author"] = commit_author
+        commit["time"] = commit_time
                 
         commits.append(commit) 
     return commits 
